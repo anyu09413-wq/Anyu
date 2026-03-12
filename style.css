@@ -1,9 +1,9 @@
 :root {
-    --primary-pink: #FF69B4; /* 深粉色，用于标题和按钮 */
-    --light-pink: #FFB6C1;   /* 浅粉色，用于背景悬停等 */
-    --light-gray: #F0F0F0;   /* 极浅灰，背景色 */
-    --dark-gray: #D3D3D3;    /* 中度灰，分割线 */
-    --text-color: #444444;
+    --primary-pink: #FF69B4;
+    --light-pink: #FFB6C1;
+    --bg-gray: #F5F5F5;
+    --dark-gray: #D3D3D3;
+    --text-main: #333333;
 }
 
 * {
@@ -15,7 +15,7 @@
 body {
     font-family: 'Roboto', sans-serif;
     background-color: #FFFFFF;
-    color: var(--text-color);
+    color: var(--text-main);
     line-height: 1.6;
     scroll-behavior: smooth;
 }
@@ -25,7 +25,7 @@ h1, h2, h3, .logo {
     letter-spacing: 2px;
 }
 
-/* 导航栏 - 换成粉色 */
+/* Navbar */
 .navbar {
     display: flex;
     justify-content: space-between;
@@ -38,81 +38,97 @@ h1, h2, h3, .logo {
     z-index: 1000;
 }
 
-.nav-links { display: flex; list-style: none; gap: 2rem; }
-.nav-links a { color: white; text-decoration: none; font-weight: bold; }
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
 
-/* Header - 浅灰背景 + 粉色边框 */
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+}
+
+/* Header */
 .header {
-    background-color: var(--light-gray);
-    padding: 80px 20px;
+    background-color: var(--bg-gray);
+    padding: 100px 20px;
     text-align: center;
     border-bottom: 8px solid var(--light-pink);
 }
 
 .profile-img {
-    width: 170px;
-    height: 170px;
+    width: 180px;
+    height: 180px;
     border-radius: 50%;
-    border: 5px solid var(--primary-pink);
+    border: 6px solid var(--primary-pink);
     object-fit: cover;
-    margin-bottom: 20px;
-    background-color: white;
+    margin-bottom: 25px;
+    background: white;
 }
 
-h1 { font-size: 4rem; color: var(--primary-pink); }
+h1 { font-size: 4.5rem; color: var(--primary-pink); margin-bottom: 10px; }
+.bio { max-width: 700px; margin: 0 auto; font-size: 1.1rem; color: #666; }
 
-/* 分区样式 */
+/* Sections */
 .section { padding: 80px 10%; text-align: center; }
 .section-title { font-size: 3rem; margin-bottom: 40px; color: var(--primary-pink); }
-.gray-bg { background-color: var(--light-gray); }
+.gray-bg { background-color: var(--bg-gray); }
 
-/* 卡片 - 粉色边框 */
-.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; }
+/* Grid & Cards */
+.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
 .card {
     background: white;
     padding: 40px;
-    border-bottom: 5px solid var(--primary-pink);
-    box-shadow: 0 5px 15px rgba(255, 105, 180, 0.1);
+    border-bottom: 6px solid var(--primary-pink);
+    box-shadow: 0 10px 30px rgba(255, 105, 180, 0.1);
+    transition: transform 0.3s;
 }
+.card:hover { transform: translateY(-5px); }
 
-/* 按钮美化 */
+/* Upload Button */
+input[type="file"] { display: none; }
 .custom-file-upload {
     display: inline-block;
-    padding: 12px 35px;
+    padding: 14px 40px;
     background: var(--primary-pink);
     color: white;
     cursor: pointer;
-    border-radius: 50px; /* 圆角按钮更符合粉色调 */
+    border-radius: 30px;
     font-family: 'Bebas Neue';
+    font-size: 1.2rem;
     transition: 0.3s;
 }
+.custom-file-upload:hover { background: var(--light-pink); }
 
-.custom-file-upload:hover {
-    background: var(--light-pink);
-    transform: scale(1.05);
-}
-
-/* 游戏部分 */
+/* Game */
 .game-container {
-    height: 300px;
+    height: 350px;
     background: white;
     border: 3px solid var(--light-pink);
+    border-radius: 20px;
     position: relative;
-    border-radius: 15px;
     overflow: hidden;
+    margin-top: 20px;
 }
 
 #game-target {
-    width: 60px;
-    height: 60px;
+    width: 65px;
+    height: 65px;
     background: var(--primary-pink);
     color: white;
-    border-radius: 50%; /* 游戏目标变成圆形（或爱心） */
+    border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
     cursor: pointer;
     position: absolute;
-    font-size: 1.5rem;
+    font-size: 1.8rem;
     user-select: none;
+    box-shadow: 0 4px 10px rgba(255, 105, 180, 0.4);
 }
+
+.score-board { font-size: 2rem; margin-top: 20px; font-weight: bold; color: var(--primary-pink); }
