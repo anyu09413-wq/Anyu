@@ -1,65 +1,66 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pink Tech Portfolio</title>
+    <title>Dev Portfolio | Pink Minimalist</title>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <nav class="navbar">
-        <div class="logo">PINK_DEV</div>
+        <div class="logo">STUDIO_PINK</div>
         <ul class="nav-links">
-            <li><a href="#about">关于我</a></li>
-            <li><a href="#projects">项目演示</a></li>
-            <li><a href="#resources">上传资源</a></li>
-            <li><a href="#games">小游戏</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#resources">Resources</a></li>
+            <li><a href="#games">Mini Game</a></li>
         </ul>
     </nav>
 
     <header id="about" class="header">
         <div class="header-content">
             <div class="img-container">
-                <img src="https://via.placeholder.com/150/FFB6C1/FFFFFF?text=PHOTO" alt="Profile" class="profile-img" id="display-picture">
+                <img src="https://via.placeholder.com/150/FFB6C1/FFFFFF?text=UPLOAD" alt="Profile" class="profile-img" id="display-picture">
             </div>
-            <h1>Dream & Code</h1>
-            <p class="bio">我是一名 Web 应用开发者。我喜欢用最纯粹的代码实现最温柔的交互。这是我的粉色极简主义实验室。</p>
+            <h1>Creative Developer</h1>
+            <p class="bio">I am a Web Apps Developer specialized in the "Vanilla Stack" (HTML, JS, CSS). I believe in high-performance code wrapped in soft, minimalist aesthetics.</p>
         </div>
     </header>
 
     <main>
         <section id="projects" class="section">
-            <h2 class="section-title">Projects</h2>
+            <h2 class="section-title">Project Demonstration</h2>
             <div class="grid">
                 <div class="card">
-                    <h3>可爱交互设计</h3>
-                    <p>利用 CSS 动画实现的柔和转场效果。</p>
+                    <h3>UI/UX Architecture</h3>
+                    <p>Building scalable interfaces using pure CSS and zero heavy frameworks.</p>
                 </div>
                 <div class="card">
-                    <h3>前端艺术</h3>
-                    <p>将复杂的逻辑隐藏在简洁的 UI 之下。</p>
+                    <h3>Logic Engines</h3>
+                    <p>Clean JavaScript implementations for complex web application workflows.</p>
                 </div>
             </div>
         </section>
 
         <section id="resources" class="section gray-bg">
-            <h2 class="section-title">Resources</h2>
+            <h2 class="section-title">Upload Resources</h2>
             <div class="upload-box">
-                <p>点击下方按钮上传你的照片：</p>
+                <p>Upload your profile picture or project assets below:</p>
                 <input type="file" id="fileInput" accept="image/*">
-                <label for="fileInput" class="custom-file-upload">选择照片</label>
-                <p id="fileNameDisplay" style="margin-top: 10px;">未选择文件</p>
+                <label for="fileInput" class="custom-file-upload">Choose File</label>
+                <p id="fileNameDisplay" style="margin-top: 15px;">No file selected</p>
             </div>
         </section>
 
         <section id="games" class="section">
-            <h2 class="section-title">Reaction Game</h2>
+            <h2 class="section-title">Reflex Game</h2>
+            <p>Catch the heart to test your response time!</p>
             <div class="game-container">
                 <div id="game-target">❤</div>
             </div>
-            <p class="score-board">得分: <span id="score">0</span></p>
+            <p class="score-board">Score: <span id="score">0</span></p>
         </section>
     </main>
 
